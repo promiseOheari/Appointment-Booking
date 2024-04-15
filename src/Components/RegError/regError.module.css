@@ -1,0 +1,26 @@
+.book{
+    height: 90vh;
+    width:100% ;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    }
+
+
+    .container{
+        box-sizing: border-box;
+        width: 771px;
+        height: 100%;
+        background-color: #F5F5F5;
+        color: #0452CE;
+        font-weight: bold;
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding-top: 100px; */
+    justify-content: center;
+    
+    }

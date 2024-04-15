@@ -1,0 +1,26 @@
+  input:nth-child(last){
+    margin-bottom: 50px;
+} 
+
+/*label{
+    margin-bottom: 100px;
+} */
+
+input{
+    width: 542.72px;
+    height: 40px;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding-left: 30px;
+    border:1px solid#D9D9D9;
+    color: #000;
+    font-weight: lighter;
+    box-shadow: 0px 8px 10px -5px rgba(118, 116, 116, 0.5);
+
+} 
+
+label{
+    margin-bottom: 10px;
+} 
