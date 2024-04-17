@@ -2,12 +2,18 @@ import React from 'react'
 import Button from '../Buttons/Button'
 import ppt from '../AptConfirmation/abt.module.css'
 import { CgDanger } from "react-icons/cg";
+import { useNavigate } from 'react-router-dom';
 
 // import apt from '../AptConfirmatio/AptConfirmation.module.css'
 // import prr from "./../Main/Main.module.css"
 
 
 function ConfirmNotFound() {
+  const navigate=useNavigate()
+
+  const handleClick=()=>{
+    navigate("/")
+  }
   return (
     <div className='bg-pink-400 h-[90vh] text-[#0452CE]'>
         <div className='flex justify-between bg-red-600 h-full' >
@@ -28,6 +34,7 @@ function ConfirmNotFound() {
                 </div>
                   
                     <Button 
+                    onClick={handleClick}
                 title="Back"
                 color='white'
                 height='40px'

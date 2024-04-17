@@ -5,14 +5,19 @@ import Shortinputs from '../Input/Shortinputs'
 import Button from '../Buttons/Button'
 import Success from '../SuccesMessage/Success'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 
 function Main() {
   const navigate= useNavigate()
   const [name, setName]= useState("")
-  const [phoneEmail, setphnEmail]= useState("")
+  const [phone, setphone]= useState("")
+  const [email, setphnEmail]= useState("")
+  const [arrival, setArrival]= useState("")
   const [host, setHost]= useState("")
   const [purpose, setPurpose]= useState("")
+  const [loading, setLoading]= useState(false)
+
 
   const [randomNum, setRandomNum]=useState(0)
 
@@ -22,13 +27,39 @@ function Main() {
   console.log(displayNumber, "hello")
 
   if(displayNumber>200){
-return navigate("/success")
+return navigate("/success",{state:{randomNum:displayNumber }})
 }
 else{
   navigate("/error")
 }
 
-      }
+ };
+
+const addVisitors =async()=>{
+const details = {
+  name,
+  email,
+  arrival,
+  host,
+  purpose,
+}
+
+setLoading(true);
+
+try {
+  const response = await axios.post ("http://localhost:8000/visitors", details) 
+  setLoading(false)
+  navigate("/Dbtable")
+} catch (error) {
+  setLoading(false)
+}
+        } 
+
+        const handleClick =()=>{
+          AptCode();
+          addVisitors();
+        };
+      
 
 // const generateR = generateNumber()
 // console.log(round,"clicked")
@@ -46,8 +77,8 @@ else{
                     
 
                     <label className={prr.labelTitle}>Email or Phone </label>
-                    <input type='text' value={phoneEmail} required className={prr.inputs} onChange={(e)=>{setphnEmail(e.target.value) 
-                      console.log(phoneEmail)}}></input>
+                    <input type='text' value={email} required className={prr.inputs} onChange={(e)=>{setphnEmail(e.target.value) 
+                      console.log(email)}}></input>
 
                     <Shortinputs/>
 
@@ -78,7 +109,8 @@ else{
                 color='white'
                 background='#0452CE'/>
 
-{/* {randomNum && <Success/>} */}
+{/* <Success
+randomNum={randomNum}/> */}
             </div>
     </div>
   )

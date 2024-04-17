@@ -10,11 +10,16 @@ import Services from "../Pages/Services";
 import Layout from "../Layouts/Layout";
 import Success from "../Components/SuccesMessage/Success";
 import RegError from "../Components/RegError/RegError";
+import DbSave from "../Components/DbSave/DbSave";
+import AptConfirmation from "../Components/AptConfirmation/AptConfirmation";
+import Dbtable from "../Components/dbTable/Dbtable";
+import ConfirmSuccess from "../Components/ConfirmSuccess/ConfirmSuccess";
+import ConfirmNotFound from "../Components/ConfirmNotFound/ConfirmNotFound";
 
   const router = createBrowserRouter([
   {
-    // element: <App/>,
-    element: <Layout/>,
+    element: <App/>,
+    // element: <Layout/>,
     children:[{
     path: "/",
         }
@@ -44,6 +49,30 @@ import RegError from "../Components/RegError/RegError";
   {
     path: "/error",
     element: <RegError/>,
+  },
+
+  {
+    path: "/Dbsave",
+    element: <DbSave/>,
+  },
+  {
+    path: "/Dbtable",
+    element: <Dbtable/>,
+  },
+
+  {
+    path: "/confirm",
+    element: <AptConfirmation/>,
+  },
+
+  {
+    path: "/confirmed",
+    element: <ConfirmSuccess/>,
+  },
+
+  {
+    path: "/notConfirmed",
+    element: <ConfirmNotFound/>,
   },
 ]);
 

@@ -1,11 +1,19 @@
 import React from 'react'
 import Button from '../Buttons/Button'
 import ppt from '../AptConfirmation/abt.module.css'
+import { Navigate, useNavigate } from 'react-router-dom'
+
 // import apt from '../AptConfirmatio/AptConfirmation.module.css'
 // import prr from "./../Main/Main.module.css"
 
 
 function AptConfirmation() {
+  const Navigate= useNavigate()
+
+  const  handleClk=()=>{
+    Navigate("/confirmed")
+  }
+
   return (
     <div className='bg-pink-400 h-[90vh] text-[#0452CE]'>
         <div className='flex justify-between bg-red-600 h-full' >
@@ -23,16 +31,20 @@ function AptConfirmation() {
                     <label>Name</label>
                     <input  require></input>
 
-                    <label>Email or Phone </label>
+                    <label>Apt Code </label>
                     <input type='text' required className='mb-[30px]'></input> 
                     </div>
                   
                     <Button 
+                    onClick={handleClk}
                 title="Confirm"
                 color='white'
                 height='40px'
                 background='#0452CE'
                 />
+
+{/* <div onClick={handleClk} className='flex items-center justify-between cursor-pointer  bg-[#0452CE] mt-[250px] p-[5px] rounded-[10px] ml-[50%] text-white'><span>appointment</span></div> */}
+
                 </div>
         </div>
        
@@ -41,3 +53,4 @@ function AptConfirmation() {
 }
 
 export default AptConfirmation
+

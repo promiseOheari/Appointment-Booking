@@ -1,10 +1,38 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import tab from "./dbTable.module.css"
+import axios from 'axios';
+
 
 function Dbtable() {
+
+const [visitors, setVisitors]=useState([])
+const [loading, setLoading]=useState(false)
+
+const fetchData = async ()=>{
+setLoading(true);
+try {
+  const response = await axios.get("http://localhost:8000/visitors")
+  setLoading(false)
+  setVisitors(response?.data, "server")
+} catch (error) {
+  console.log(error, "error occured")
+  setLoading(false)
+  
+};
+}
+
+useEffect(()=>{
+  fetchData();
+},[]);
+console.log(visitors, "me")
+
+
   return (
     <div className='p-[60px] flex items-center flex-col'>
        <h2 className='pb-[50px] text-[24px]'>Visitor Appointment Information</h2>
+       {loading?(
+        <p>loading...</p>
+       ):(
         <table>
             <thead>
               <tr>
@@ -20,99 +48,42 @@ function Dbtable() {
             </thead>
 
             <tbody>
-              <tr>
-              <td>1</td>
-                <td>prom</td>
-                <td>0998765</td>
-                <td>ttyyr</td>
-                <td>thfdsa</td>
-                <td>thfdsa@@@</td>
-                <td>Mamma</td>
-                <td>complain</td>
-           
+              {visitors?.map((i,index)=>{
+                return(
+                <tr>
+                <td>{index+1}</td>
+                <td>{i.name}</td>
+                <td>{i.phone}</td>
+                <td>{i.arrival}</td>
+                <td>{i.exit}</td>
+                {/* <td>{i.email}</td> */}
+                <td>{i.host}</td>
+                <td>{i.purpose}</td> 
               </tr>
-
-              <tr>
-              <td>2</td>
-                <td>prom</td>
-                <td>0998765</td>
-                <td>ttyyr</td>
-                <td>thfdsa</td>
-                <td>thfdsa@@@</td>
-                <td>Mamma</td>
-                <td>complain</td>
-           
-              </tr>
-
-              <tr>
-              <td>3</td>
-                <td>prom</td>
-                <td>0998765</td>
-                <td>ttyyr</td>
-                <td>thfdsa</td>
-                <td>thfdsa@@@</td>
-                <td>Mamma</td>
-                <td>complain</td>
-           
-              </tr>
-
-              <tr>
-              <td>4</td>
-                <td>prom</td>
-                <td>0998765</td>
-                <td>ttyyr</td>
-                <td>thfdsa</td>
-                <td>thfdsa@@@</td>
-                <td>Mamma</td>
-                <td>complain</td>
-           
-              </tr>
-
-              <tr>
-              <td>5</td>
-                <td>prom</td>
-                <td>0998765</td>
-                <td>ttyyr</td>
-                <td>thfdsa</td>
-                <td>thfdsa@@@</td>
-                <td>Mamma</td>
-                <td>complain</td>
-           
-              </tr>
-
-              <tr>
-              <td>6</td>
-                <td>prom</td>
-                <td>0998765</td>
-                <td>ttyyr</td>
-                <td>thfdsa</td>
-                <td>thfdsa@@@</td>
-                <td>Mamma</td>
-                <td>complain</td>
-           
-              </tr>
-
-              <tr>
-              <td>7</td>
-                <td>prom</td>
-                <td>0998765</td>
-                <td>ttyyr</td>
-                <td>thfdsa</td>
-                <td>thfdsa@@@</td>
-                <td>Mamma</td>
-                <td>complain</td>
-           
-              </tr>
-              {/* <tr><</tr> */}
-              {/* <tr></tr>
-              <tr></tr>
-              <tr></tr>
-              <tr></tr> */}
+              )
+              })}
+              
             </tbody>
         </table>
+
+)}
         {/* http://localhost:8000/visitors */}
     </div>
   )
 }
+export default Dbtable;
 
-export default Dbtable
+{/* <tbody>
+  {visitors?.map((visitor, index) => (
+    <tr key={visitor.id}>
+      <td>{index + 1}</td>
+      <td>{visitor.name}</td>
+      <td>{visitor.phone}</td>
+      <td>{visitor.arrival}</td>
+      <td>{visitor.exit}</td>
+      {/* <td>{visitor.email}</td> */}
+  //     <td>{visitor.host}</td>
+  //     <td>{visitor.purpose}</td> 
+  //   </tr>
+  // ))}
+// </tbody> */}

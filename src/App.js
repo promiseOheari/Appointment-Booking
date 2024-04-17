@@ -8,18 +8,21 @@ import Success from './Components/SuccesMessage/Success';
 import Dbtable from './Components/dbTable/Dbtable';
 import AptConfirmation from './Components/AptConfirmation/AptConfirmation';
 import ConfirmNotFound from './Components/ConfirmNotFound/ConfirmNotFound';
-
+import ConfirmSuccess from './Components/ConfirmSuccess/ConfirmSuccess';
+import DbSave from './Components/DbSave/DbSave';
 function App() {
   return (
     <div>
     <Header/>
-    {/* <Main/> */}
+    <Main/>
     {/* <Shortinputs/> */}
     {/* <RegError/> */}
     {/* <Success/> */}
     {/* <Dbtable/> */}
     {/* <AptConfirmation/> */}
-    <ConfirmNotFound/>
+    {/* <ConfirmNotFound/> */}
+    {/* <ConfirmSuccess/> */}
+    {/* <DbSave/> */}
     </div>
   );
 }
