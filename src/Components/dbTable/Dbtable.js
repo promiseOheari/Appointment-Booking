@@ -53,10 +53,10 @@ console.log(visitors, "me")
                 <tr>
                 <td>{index+1}</td>
                 <td>{i.name}</td>
-                <td>{i.phone}</td>
+                <td>{i.email}</td>
                 <td>{i.arrival}</td>
+                <td>{i.date}</td>
                 <td>{i.exit}</td>
-                {/* <td>{i.email}</td> */}
                 <td>{i.host}</td>
                 <td>{i.purpose}</td> 
               </tr>
@@ -87,3 +87,11 @@ export default Dbtable;
   //   </tr>
   // ))}
 // </tbody> */}
+// {
+//   "id": "c84a",
+//   "name": "promise",
+//   "email": "rrttjjiiu",
+//   "arrival": "",
+//   "host": "Josh",
+//   "purpose": "Registration"
+// },

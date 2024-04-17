@@ -8,8 +8,8 @@ function Layout() {
   return (
     <div>
         <Header/>
-        {/* <Main/> */}
-        <AptConfirmation/>
+        <Main/>
+        {/* <AptConfirmation/> */}
         <Outlet/>
     </div>
   )

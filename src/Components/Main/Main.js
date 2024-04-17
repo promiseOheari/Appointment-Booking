@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import prr  from './Main.module.css'
+import pr from "../Input/ShortInputs.module.css"
 import Header from '../Header/Header'
 import Shortinputs from '../Input/Shortinputs'
 import Button from '../Buttons/Button'
@@ -12,11 +13,14 @@ function Main() {
   const navigate= useNavigate()
   const [name, setName]= useState("")
   const [phone, setphone]= useState("")
-  const [email, setphnEmail]= useState("")
+  const [email, setEmail]= useState("")
   const [arrival, setArrival]= useState("")
+  const [date, setDate]= useState('')
   const [host, setHost]= useState("")
   const [purpose, setPurpose]= useState("")
   const [loading, setLoading]= useState(false)
+  // const [time, setTime]= useState('')
+
 
 
   const [randomNum, setRandomNum]=useState(0)
@@ -40,6 +44,7 @@ const details = {
   name,
   email,
   arrival,
+  date,
   host,
   purpose,
 }
@@ -49,7 +54,7 @@ setLoading(true);
 try {
   const response = await axios.post ("http://localhost:8000/visitors", details) 
   setLoading(false)
-  navigate("/Dbtable")
+  // navigate("/databse")
 } catch (error) {
   setLoading(false)
 }
@@ -60,7 +65,8 @@ try {
           addVisitors();
         };
       
-
+        // console.log(addVisitors,"clicked")
+        // console.log(handleClick,"clicked")
 // const generateR = generateNumber()
 // console.log(round,"clicked")
 
@@ -76,11 +82,34 @@ try {
                     console.log(name)}}></input>
                     
 
-                    <label className={prr.labelTitle}>Email or Phone </label>
-                    <input type='text' value={email} required className={prr.inputs} onChange={(e)=>{setphnEmail(e.target.value) 
-                      console.log(email)}}></input>
+                    <label className={prr.labelTitle}>Email</label>
+                    <input type='text' value={email} required className={prr.inputs} onChange={(e)=>{setEmail(e.target.value)
+                    console.log(email, 'emaail')
+                      }}></input>
 
-                    <Shortinputs/>
+                    {/* <Shortinputs
+                    time={time}
+                    date={date}
+                    setTime={setTime}
+                    setDate={setDate}
+                    /> */}
+                <div className={pr.box}>
+                  <div>
+                    <label className={pr.labelTitle}>Date  </label>
+                        <input type='date' value={date} required className={pr.half} onChange={(e)=>{
+                            setDate(e.target.value)
+                            console.log(date)
+                         }}></input>
+                    </div>
+
+                    <div>
+                      <label className={pr.labelTitle}>Time  </label>
+                         <input type='time' value={arrival} required className={pr.half} onChange={(e)=>{
+                          setArrival(e.target.value)
+                          console.log(arrival)
+                         }}></input>
+                    </div>
+                </div>
 
                   <label className={prr.labelTitle}>Host </label>
                   <select className=' block mt-[10px] required' value={host} onChange={(e)=>{setHost(e.target.value)
@@ -102,9 +131,9 @@ try {
                     <option value='Registration'>Registration</option>
                   </select>
                 </div>
-                {randomNum}
+                {/* {randomNum} */}
 
-                <Button onClick={AptCode}
+                <Button onClick={handleClick}
                 title="Book"
                 color='white'
                 background='#0452CE'/>
@@ -112,7 +141,7 @@ try {
 {/* <Success
 randomNum={randomNum}/> */}
             </div>
-    </div>
+     </div>
   )
 }
 

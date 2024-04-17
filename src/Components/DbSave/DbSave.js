@@ -7,6 +7,7 @@ import Button from '../Buttons/Button'
 import Success from '../SuccesMessage/Success'
 import rrr from './dbSave.module.css'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 
 
@@ -17,24 +18,42 @@ function DbSave() {
   const [host, setHost]= useState("")
   const [purpose, setPurpose]= useState("")
   const [exitTime, setExitTime]=useState('')
+  const [loading, setLoading]= useState(false)
 
 
 // const generateR = generateNumber()
 // console.log(round,"clicked")
 
+const sendData = async ()=>{
+  setLoading(true);
+
+  try {
+    const response =  await axios.post("http://localhost:8000/visitors", exitTime)
+    setLoading(false)
+  } catch (error) {
+    setLoading(false)
+  } 
+ }
+
+
+const database = ()=>{
+  navigate('/databse')
+}
+
   return (
     <div className={rrr.book}>
+      {loading? (<p>loading...</p>):(
       
             <div className={rrr.container}>
                 {/* <h2 className=' text-[30px] text-[]'>Appointment Booking</h2> */}
 
                 <div  className={rrr.foorm}>
                     <label className={rrr.labelTitle}>Name  </label>
-                    <input type='text' required value={name} className={rrr.inputs} onChange={(e)=>{setName(e.target.value)
+                    {/* <input type='text' required value={name} className={rrr.inputs} onChange={(e)=>{setName(e.target.value)
                     console.log(name)}}></input>
                     
 
-                    <label className={rrr.labelTitle}>Email or Phone </label>
+                    <label className={rrr.labelTitle}>Email </label>
                     <input type='text' value={phoneEmail} required className={rrr.inputs} onChange={(e)=>{setphnEmail(e.target.value) 
                       console.log(phoneEmail)}}></input>
 
@@ -58,16 +77,17 @@ function DbSave() {
                     <option value='Deposit'>Deposit</option>
                     <option value='Transfer'>Transfer</option>
                     <option value='Registration'>Registration</option>
-                  </select>
+                  </select> */}
 
                   <label className={rrr.labelTitle}>Exit Time</label>
-                    <input  type='time' required value={exitTime} className={rrr.inputs} onChange={(e)=>{setName(e.target.value)
-                    console.log(exitTime)}}></input>
+                    <input  type='time' required value={exitTime} className={rrr.inputs} onChange={(e)=>{setExitTime(e.target.value)
+                    console.log(exitTime,'time')}}></input>
                     
                 </div>
             
 
                 <Button className={rrr.btn}
+                onClick={database}
                 title="Save"
                 color='white'
                 background='#0452CE'
@@ -75,6 +95,8 @@ function DbSave() {
 
 {/* {randomNum && <Success/>} */}
             </div>
+      )
+                    }
     </div>
   )
 }

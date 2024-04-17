@@ -1,6 +1,4 @@
 .btn{
-    /* width: 184px; */
-    /* height: 21px; */
     background-color: #125AD0;
     color: #fff;
     padding: 10px;
@@ -8,14 +6,11 @@
     border: none;
     border-radius: 10px;
     transition: all 0.4s ease-in-out;
-
+    margin-top: 20px;
 }
 
 .btn:hover{
-   
     background-color:#4c83dd;
-    /* color: #125AD0; */
-    
 }
 
 

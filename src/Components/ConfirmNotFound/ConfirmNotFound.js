@@ -3,6 +3,7 @@ import Button from '../Buttons/Button'
 import ppt from '../AptConfirmation/abt.module.css'
 import { CgDanger } from "react-icons/cg";
 import { useNavigate } from 'react-router-dom';
+import Header from '../Header/Header';
 
 // import apt from '../AptConfirmatio/AptConfirmation.module.css'
 // import prr from "./../Main/Main.module.css"
@@ -15,8 +16,9 @@ function ConfirmNotFound() {
     navigate("/")
   }
   return (
-    <div className='bg-pink-400 h-[90vh] text-[#0452CE]'>
-        <div className='flex justify-between bg-red-600 h-full' >
+    <div className=' h-[90vh] text-[#0452CE]'>
+      <Header/>
+        <div className='flex justify-between mt-[3px] h-full' >
 
             <div className='  bg-gradient-to-t from-[#022968] to-[#0452CE] text-[#fff] w-[50%] flex items-center justify-center  '> 
             <div className='w-[450px]  text-center'>

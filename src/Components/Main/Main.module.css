@@ -9,6 +9,7 @@ justify-content: center;
 /* background: red; */
 box-sizing: border-box;
 flex-wrap: wrap;
+margin-top: 5px;
 }
 
 .foorm{
@@ -19,14 +20,13 @@ flex-wrap: wrap;
 .container{
     box-sizing: border-box;
     width: 771px;
-    height: 742px;
+    height: 100%;
     background-color: #F5F5F5;
     color: #0452CE;
     font-weight: bold;
     display: flex;
-flex-direction: column;
-align-items: center;
-/* padding-top: 0px; */
+    flex-direction: column;
+    align-items: center;
 
 }
 
@@ -82,3 +82,8 @@ select{
 select:last-child{
     margin-bottom: 40px;
 }
+
+
+
+
+     

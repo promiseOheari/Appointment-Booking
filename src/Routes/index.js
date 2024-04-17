@@ -18,8 +18,8 @@ import ConfirmNotFound from "../Components/ConfirmNotFound/ConfirmNotFound";
 
   const router = createBrowserRouter([
   {
-    element: <App/>,
-    // element: <Layout/>,
+    // element: <App/>,
+    element: <Layout/>,
     children:[{
     path: "/",
         }
@@ -73,6 +73,11 @@ import ConfirmNotFound from "../Components/ConfirmNotFound/ConfirmNotFound";
   {
     path: "/notConfirmed",
     element: <ConfirmNotFound/>,
+  },
+
+  {
+    path: "/databse",
+    element: <Dbtable/>,
   },
 ]);
 
