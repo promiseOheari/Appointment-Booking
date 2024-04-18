@@ -94,7 +94,7 @@ try {
                     setDate={setDate}
                     /> */}
                 <div className={pr.box}>
-                  <div>
+                  <div className=' flex'>
                     <label className={pr.labelTitle}>Date  </label>
                         <input type='date' value={date} required className={pr.half} onChange={(e)=>{
                             setDate(e.target.value)

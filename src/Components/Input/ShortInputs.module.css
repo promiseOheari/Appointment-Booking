@@ -21,3 +21,15 @@ margin-bottom: 20px;
 
 
 }
+
+@media(max-width:600px){
+  .box{
+   
+    flex-direction: column;
+  /* background-color: brown; */
+justify-content: space-between;
+height:80px;
+margin-bottom: 20px;
+}
+
+}

@@ -13,7 +13,7 @@ import DbSave from './Components/DbSave/DbSave';
 function App() {
   return (
     <div>
-    <Header/>
+    {/* <Header/> */}
     <Main/>
     {/* <Shortinputs/> */}
     {/* <RegError/> */}

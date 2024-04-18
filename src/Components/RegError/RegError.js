@@ -22,7 +22,7 @@ function RegError() {
 
          <CgDanger size={58} color='#F76972' />
 
-       <p className='w-[569px] text-[24px] mb-[50px] mt-[30px] text-center '>An unexpected error has occurred.  Please check your internet  setting  and try again.</p>
+       <p className='w-[569px] text-[24px] mb-[50px] mt-[30px] text-center  '>An unexpected error has occurred.  Please check your internet  setting  and try again.</p>
 
         <Button 
         onClick={handleClick}

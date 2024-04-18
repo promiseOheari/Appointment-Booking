@@ -20,7 +20,7 @@ function AptConfirmation() {
       <Header/>
         <div className='flex justify-between h-full mt-[5px]' >
 
-            <div className='  bg-gradient-to-t from-[#022968] to-[#0452CE] text-[#fff] w-[50%] flex items-center justify-center  '> 
+            <div className='   bg-gradient-to-t from-[#022968] to-[#0452CE] text-[#fff] w-[50%] flex items-center justify-center  '> 
             <div className='w-[450px]  text-center'>
             <h1 className='text-[52px] flex-row '>Please comfirm your appointment here</h1>
             <p className='text-[18px]'>A healthy tomorrow starts with a healthy today.  We are here to serve  you better everyday</p>

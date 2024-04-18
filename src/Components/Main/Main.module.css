@@ -19,8 +19,12 @@ margin-top: 5px;
 
 .container{
     box-sizing: border-box;
-    width: 771px;
+    width: 55%;
+
+    /* width: 771px; */
     height: 100%;
+    /* width: 100%; */
+    
     background-color: #F5F5F5;
     color: #0452CE;
     font-weight: bold;
@@ -35,8 +39,9 @@ margin-top: 5px;
     margin-bottom: 20px;
 }
 .inputs{
-    width: 542.72px;
+    /* width: 542.72px; */
     height: 36px;
+    width: 100%;
     display: block;
     margin-top: 5px;
     margin-bottom: 20px;
@@ -83,7 +88,22 @@ select:last-child{
     margin-bottom: 40px;
 }
 
-
-
-
-     
+@media(max-width:600px){
+    .container{
+        box-sizing: border-box;
+        width: 100%;
+        /* padding: 20px ; */
+    
+        /* width: 771px; */
+        height: 100%;
+        /* width: 100%; */
+        
+        background-color: red;
+        color: #0452CE;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    }
+}
