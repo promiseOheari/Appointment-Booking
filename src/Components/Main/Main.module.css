@@ -98,7 +98,7 @@ select:last-child{
         height: 100%;
         /* width: 100%; */
         
-        background-color: red;
+        background-color: #F5F5F5;
         color: #0452CE;
         font-weight: bold;
         display: flex;

@@ -18,8 +18,8 @@ import ConfirmNotFound from "../Components/ConfirmNotFound/ConfirmNotFound";
 
   const router = createBrowserRouter([
   {
-    element: <App/>,
-    // element: <Layout/>,
+    // element: <App/>,
+    element: <Layout/>,
     children:[{
     path: "/",
         }

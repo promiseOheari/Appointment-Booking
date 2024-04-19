@@ -20,36 +20,42 @@ function Success() {
   }
 
   return (
-    <div >           
+    <div className="bg-[#f5f5f5] flex flex-col items-center justify-center h-[100vh] w-full sm:w-2/4 mx-auto p-10">
+          
     {/* <Header/>  */}
-    <div className={p.book}>
+    {/* <div className={p.book}> */}
       
-     <div className={p.container}>
+     {/* <div className={p.container}> */}
         {/* <h2 className=' text-[30px] text-[]'>Appointment Booking</h2> */}
-<div className=' flex flex-col mb-[40px]  justify-center items-center  w-[542.72px]'>
+{/* <div className=' flex flex-col mb-[40px]  justify-center items-center  w-[542.72px]'> */}
 <GrStatusGood size={50} color='#85B6FF'/>
 
-<div className='flex flex-col items-center'>
+<div className='flex flex-col items-center mb-[20px] text-[#0452CE]'>
     <h2  className='text-[24px] mt-[20px]  mb-[10px]'>Appointment Successful</h2>
     <p className='text-[18px] w-[350px]'><b>The<b></b> apt code: {location?.state?.randomNum }</b> has been sent to your email or phone number Successful</p>
 </div>
 
-</div>
+{/* </div> */}
 
 
-        <Button onClick={handleClick}
+        <Button  onClick={handleClick}
         title="Back"
         color='white'
-        background='#0452CE'/>
+         width="80%"
+        background='#0452CE'
+        
+        />
+        
+       
 
-        <div onClick={handleClk} className='flex items-center justify-between cursor-pointer  bg-[#0452CE] mt-[250px] p-[5px] rounded-[10px] ml-[50%] text-white'><span>Continue</span><FaArrowRight /></div>
+        <div onClick={handleClk} className='flex items-center justify-between cursor-pointer  bg-[#0452CE] mt-[170px] hover:bg-[#7abeec] transition-all ease-in-out duration-150s p-[7px] rounded-[10px] ml-[50%] text-white'><span>Continue</span><FaArrowRight /></div>
     
     </div>
     
-</div>
+// </div>
 
 
- </div>
+//  </div>
   )
 }
 

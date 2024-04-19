@@ -13,25 +13,27 @@ function RegError() {
     Navigate("/")
   }
   return (
-    <div>           
-    <Header/> 
-    <div className={p.book}>
+    <div className="bg-[#f5f5f5] flex flex-col items-center justify-center h-[100vh] w-full sm:w-2/4 mx-auto px-10">
+          
+    {/* <Header/>  */}
+    {/* <div className={p.book}> */}
       
-     <div className={p.container}>
+     {/* <div className={p.container}> */}
         {/* <h2 className=' text-[30px] text-[]'>Appointment Booking</h2> */}
 
          <CgDanger size={58} color='#F76972' />
 
-       <p className='w-[569px] text-[24px] mb-[50px] mt-[30px] text-center  '>An unexpected error has occurred.  Please check your internet  setting  and try again.</p>
+       <p className=' text-[24px] mb-[50px] mt-[30px] text-center  text-[#0452CE]'>An unexpected error has occurred.  Please check your network and try again.</p>
 
         <Button 
         onClick={handleClick}
         title="Back"
         color='white'
+        width="90%"
         background='#0452CE'/>
     </div>
-</div>
- </div>
+// </div>
+//  </div>
   )
 }
 
