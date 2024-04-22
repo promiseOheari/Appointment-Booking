@@ -26,27 +26,7 @@
     }
 
     @media screen and (max-width: 500px) {
-        .book {
-            height: 90vh !important;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    
-        .container {
-            box-sizing: border-box;
-            width: 90%; /* Adjust the width to a percentage or smaller value */
-            max-width: 300px; /* Set a max-width to prevent content from overflowing */
-            height: auto; /* Allow the height to adjust based on content */
-            background-color: #F5F5F5;
-            color: #0452CE;
-            font-weight: bold;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
+        
     }
     
     

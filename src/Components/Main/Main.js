@@ -70,7 +70,7 @@ function Main() {
   // console.log(round,"clicked")
 
   return (
-    <div className="bg-[#f5f5f5] h-[100%] w-full sm:w-2/4 mx-auto p-10">
+    <div className="bg-[#f5f5f5] h-[89vh] mt-[2px] w-full sm:w-2/4 mx-auto p-10">
 
 
       <label className={prr.labelTitle}>Name </label>

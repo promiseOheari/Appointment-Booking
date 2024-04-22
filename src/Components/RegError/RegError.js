@@ -14,12 +14,6 @@ function RegError() {
   }
   return (
     <div className="bg-[#f5f5f5] flex flex-col items-center justify-center h-[100vh] w-full sm:w-2/4 mx-auto px-10">
-          
-    {/* <Header/>  */}
-    {/* <div className={p.book}> */}
-      
-     {/* <div className={p.container}> */}
-        {/* <h2 className=' text-[30px] text-[]'>Appointment Booking</h2> */}
 
          <CgDanger size={58} color='#F76972' />
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import tab from "./dbTable.module.css"
 import axios from 'axios';
+import Header from '../Header/Header';
 
 
 function Dbtable() {
@@ -28,8 +29,10 @@ console.log(visitors, "me")
 
 
   return (
-    <div className='p-[60px] flex items-center flex-col'>
-       <h2 className='pb-[50px] text-[24px]'>Visitor Appointment Information</h2>
+    <div className='w-full text-[blue]'>
+      {/* <Header/> */}
+    <div className=' flex items-center flex-col w-[100%]'>
+       <h1 className='pb-[50px] text-[24px] mt-[50px] font-bold'>Visitor Appointment Information</h1>
        {loading?(
         <p>loading...</p>
        ):(
@@ -68,6 +71,7 @@ console.log(visitors, "me")
 
 )}
         {/* http://localhost:8000/visitors */}
+    </div>
     </div>
   )
 }

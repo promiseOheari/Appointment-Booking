@@ -41,15 +41,13 @@ const database = ()=>{
 }
 
   return (
-    <div className={rrr.book}>
+       
+    <div className=" bg-[#f5f5f5] h-[100vh] w-full sm:w-2/4 mx-auto p-10 flex flex-col items-center">
       {loading? (<p>loading...</p>):(
       
-            <div className={rrr.container}>
-                {/* <h2 className=' text-[30px] text-[]'>Appointment Booking</h2> */}
-
-                <div  className={rrr.foorm}>
-                    <label className={rrr.labelTitle}>Name  </label>
-                    {/* <input type='text' required value={name} className={rrr.inputs} onChange={(e)=>{setName(e.target.value)
+       <>
+                    {/* <label className={rrr.labelTitle}>Name  </label>
+                    <input type='text' required value={name} className={rrr.inputs} onChange={(e)=>{setName(e.target.value)
                     console.log(name)}}></input>
                     
 
@@ -78,12 +76,12 @@ const database = ()=>{
                     <option value='Transfer'>Transfer</option>
                     <option value='Registration'>Registration</option>
                   </select> */}
-
+                    <div className='flex items-left flex-col w-[100%] mt-[30%]'>
                   <label className={rrr.labelTitle}>Exit Time</label>
                     <input  type='time' required value={exitTime} className={rrr.inputs} onChange={(e)=>{setExitTime(e.target.value)
-                    console.log(exitTime,'time')}}></input>
+                    console.log(exitTime,'time')}}></input></div>
                     
-                </div>
+                
             
 
                 <Button className={rrr.btn}
@@ -91,12 +89,12 @@ const database = ()=>{
                 title="Save"
                 color='white'
                 background='#0452CE'
+                width='100%'
                  />
 
 {/* {randomNum && <Success/>} */}
-            </div>
-      )
-                    }
+      </>     
+    ) }
     </div>
   )
 }

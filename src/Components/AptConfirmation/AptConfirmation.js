@@ -16,44 +16,46 @@ function AptConfirmation() {
   }
 
   return (
-    <div className=' h-[100vh] w-full text-[#0452CE] flex justify-between'>
-       
-        <div className='bg-gradient-to-t from-[#022968] to-[#0452CE] text-[#fff] w-[50%] flex flex-col items-center justify-center text-center px-[100px] hidden sm:block '>
+    <div className=' h-[100vh] w-full text-[#0452CE] '>
+       <Header/>
+       <div className=' h-[89vh] mt-[2px] w-full text-[#0452CE] flex justify-between'> 
+       <div className='bg-gradient-to-t from-[#022968] to-[#0452CE] text-[#fff] w-[50%] pt-[170px] flex flex-col items-center justify-center text-center px-[100px] hidden sm:block '>
  
-            <h1 className='text-[52px] flex-row '>Please comfirm your appointment here</h1>
-            <p className='text-[18px] mt-[10px]'>A healthy tomorrow starts with a healthy today.  We are here to serve  you better everyday</p>
-            </div>   
-                     
-                <div className=' bg-[#fff] w-full sm:w-[50%]  flex items-center justify-center flex-col'>
-                    <h1 className='text-[32px] mb-[40px] font-bold'>Appointment Details</h1>
-                    <div className='mb-[20px] w-full  flex flex-col justify-center items-center'>
-                    <div className=' w-[80%]'>
-                      <label>Name</label>
-                    <input  require className='mb-[30px] w-[100%]'></input>
-                      </div>
-                    
-                <div className=' w-[80%]'>
-                    <label>Apt Code </label>
-                    <input type='text' required className='mb-[30px] w-[100%]'></input> 
-                </div>
-          </div>
-                
-                  
-                    <Button 
-                    onClick={handleClk}
-                title="Confirm"
-                color='white'
-                height='40px'
-                background='#0452CE'
-                width='80%'
-                />
-
-{/* <div onClick={handleClk} className='flex items-center justify-between cursor-pointer  bg-[#0452CE] mt-[250px] p-[5px] rounded-[10px] ml-[50%] text-white'><span>appointment</span></div> */}
-
-                </div>
-        </div>
+ <h1 className='text-[52px] flex-row '>Please comfirm your appointment here</h1>
+ <p className='text-[18px] mt-[10px]'>A healthy tomorrow starts with a healthy today.  We are here to serve  you better everyday</p>
+ </div>   
+          
+     <div className=' bg-[#fff] w-full sm:w-[50%]  flex items-center justify-center flex-col'>
+         <h1 className='text-[32px] mb-[40px] font-bold'>Appointment Details</h1>
+         <div className='mb-[20px] w-full  flex flex-col justify-center items-center'>
+         <div className=' w-[80%]'>
+           <label>Name</label>
+         <input  require className='mb-[30px] w-[100%]'></input>
+           </div>
+         
+     <div className=' w-[80%]'>
+         <label>Apt Code </label>
+         <input type='text' required className='mb-[30px] w-[100%]'></input> 
+     </div>
+</div>
+     
        
-    // </div>
+         <Button 
+         onClick={handleClk}
+     title="Confirm"
+     color='white'
+     height='40px'
+     background='#0452CE'
+     width='80%'
+     />
+
+
+     </div>
+
+       </div>
+       
+        </div>
+
   )
 }
 
